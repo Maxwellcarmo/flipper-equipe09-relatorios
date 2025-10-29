@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Agendamento</title>
+    <link rel="stylesheet" href="../style.css" /> 
+    <link rel="stylesheet" href="agendamento.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container logo">
+            <h1>Solicitação de Agendamento</h1>
+        </div>
+    </header>
+
+    <main class="main-content container agendamento-page">
+        
+        <h2 class="section-title">1. Selecione a Data e o Horário</h2>
+
+        <div class="calendar-container">
+            <div id="calendar">
+                <div class="calendar-header">
+                    <button id="prevMonth">◀</button>
+                    <h3 id="monthYear">Outubro 2025</h3>
+                    <button id="nextMonth">▶</button>
+                </div>
+                <div class="weekdays">
+                    <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                </div>
+                <div class="days" id="calendarDays">
+                    <div class="day past-day">29</div>
+                    <div class="day past-day">30</div>
+                    <div class="day past-day">1</div>
+                    <div class="day available" data-date="2025-10-02">2</div>
+                    <div class="day selected" data-date="2025-10-03">3</div>
+                    <div class="day unavailable" data-date="2025-10-04">4</div>
+                </div>
+            </div>
+        </div>
+
+        <form id="agendamentoForm">
+            <h2 class="section-title">2. Detalhes do Agendamento</h2>
+            
+            <div class="form-group">
+                <label for="sala">Sala/Laboratório Desejado:</label>
+                <select id="sala" required>
+                    <option value="">Selecione...</option>
+                    <option value="LabInfo1">Laboratório de Informática 1</option>
+                    <option value="SalaMultimidia">Sala Multimídia A</option>
+                    <option value="LabFisica">Laboratório de Física</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="horario">Horário (Início - Fim):</label>
+                <select id="horario" required>
+                    <option value="">Selecione...</option>
+                    <option value="07:00-09:00">07:00 - 09:00</option>
+                    <option value="19:00-21:00">19:00 - 21:00</option>
+                </select>
+            </div>
+
+            <h2 class="section-title">3. Seus Dados (Professor)</h2>
+
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone para Contato:</label>
+                <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="motivo">Motivo do Agendamento:</label>
+                <textarea id="motivo" rows="3" required></textarea>
+            </div>
+            
+            <p class="warning-text">⚠️ O agendamento será enviado para a aprovação do Administrador.</p>
+            
+            <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i> Enviar para Aprovação
+            </button>
+        </form>
+
+        <p><a href="../index.html" class="back-link">Voltar ao Menu Principal</a></p>
+    </main>
+
+    <script src="agendamento.js"></script> </body>
+</html>

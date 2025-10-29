@@ -1,0 +1,20 @@
+<section class="main-menu">
+    <h2 class="section-title">Acesso Rápido - Administradores</h2>
+
+    <button class="menu-button" onclick="toggleSubOptions(this, 'agendamentos-adm-sub')">
+        <i class="fas fa-user-check"></i> Gestão de Agendamentos <span class="chevron">▶</span>
+    </button>
+    <div id="agendamentos-adm-sub" class="sub-options show">
+        <a href="aprovar-agendamentos.html">Aprovar/Rejeitar Agendamentos (Pendentes)</a>
+        <a href="historico-agendamentos.html">Histórico Completo de Agendamentos</a>
+        <a href="gerenciar-recursos.html">Gerenciar Salas e Laboratórios</a>
+    </div>
+    
+    <button class="menu-button" onclick="toggleSubOptions(this, 'gestao-sub')">
+        <i class="fas fa-cogs"></i> Gestão Acadêmica <span class="chevron">▶</span>
+    </button>
+    <div id="gestao-sub" class="sub-options">
+        <a href="link-cadastro-aluno.html">Cadastro de Alunos</a>
+        <a href="link-cadastro-professor.html">Cadastro de Professores</a>
+    </div>
+</section>

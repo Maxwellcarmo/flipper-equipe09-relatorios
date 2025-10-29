@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipper - Acesso Rápido</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="agendamento.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" href="logo.jpg" type="image/png" />
+</head>
+<body>
+    <header class="header">
+        <div class="container logo">
+            <img src="images\logo.jpg" alt="Logo" class="logo-img" />
+            <div class="logo-text">
+                <h1 class="title">Flipper</h1>
+                <p class="subtitle">Conectando Conhecimento</p>
+                <p class="address">flipperacad.com.br</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="tabs-container container">
+            <div class="tabs-nav" id="tabs-nav">
+                <button class="tab-button active" onclick="openTab(event, 'alunos')">Alunos</button>
+                <button class="tab-button" onclick="openTab(event, 'professores')">Professores</button>
+                <button class="tab-button" onclick="openTab(event, 'administradores')">Administradores</button>
+            </div>
+
+            <div id="alunos" class="tab-content active-tab">
+                <section class="main-menu">
+                    <img src="images\semanaeng.jpg" alt="Semana da Engenharia" class="banner-img" />
+                    <h2 class="section-title">Acesso Rápido - Alunos</h2>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'horarios-sub')">
+                        <i class="fas fa-clock"></i> Horários e Calendário<span class="chevron">▶</span>
+                    </button>
+                    <div id="horarios-sub" class="sub-options">
+                        <a href="horarioaulas/horarioaulas.html">Horário das Aulas</a>
+                        <a href="calendarioacademico/calendarioacademico.html">Calendário Acadêmico</a>
+                        <a href="https://www.anhanguera.com/institucional/documentos/">Calendário Acadêmico - Download</a>
+                        <a href="coordenadores/coordenadores.html">Atendimento dos Coordenadores</a>
+                        <a href="setores/setores.html">Funcionamento dos Setores</a>
+                        <a href="localizacao/localizacao.html">Localização da Faculdade</a>
+                        <a href="https://www.uberlandia.mg.gov.br/prefeitura/secretarias/transito-e-transportes/udibus/">Horários dos Ônibus</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'portais-sub')">
+                        <i class="fas fa-graduation-cap fa-fw unchecked-icon"></i> Portais do Aluno <span class="chevron">▶</span>
+                    </button>
+                    <div id="portais-sub" class="sub-options">
+                        <a href="https://login.kroton.com.br/">Portal do Aluno</a>
+                        <a href="tel:30034030">📞 CRA - Central do Aluno</a>
+                        <a href="https://www.anhanguera.com/guiadoaluno">Guia do Aluno</a>
+                        <a href="https://www.youtube.com/watch?v=IvDySAVeRtI">Aula Inaugural</a>
+                        <a href="https://www.santanderopenacademy.com/pt_br/index.html">Santander Academy</a>
+                        <a href="https://www.amigovalepremio.com.br/pitagoras">Amigo Vale Prêmio</a>
+                        <a href="https://escolhaoutrocurso.vestibulares.com.br/">Reopção Calouro</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'atendimento-sub')">
+                        <i class="fas fa-comments fa-fw unchecked-icon"></i> Atendimento ao Aluno <span class="chevron">▶</span>
+                    </button>
+                    <div id="atendimento-sub" class="sub-options">
+                        <a href="https://login.kroton.com.br/">Portal do Aluno</a>
+                        <a href="tel:30034030">📞 CRA - Central do Aluno</a>
+                        <a href="tel:08007734444">📞 Central de Renegociação</a>
+                        <a href="tel:08000001579">📞 Central do Candidato</a>
+                        <a href="tel:08007222241">📞 Central de Pós-Graduação</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'financeiro-sub')">
+                        <i class="fa-solid fa-ticket"></i> Financeiro <span class="chevron">▶</span>
+                    </button>
+                    <div id="financeiro-sub" class="sub-options">
+                        <a href="https://www.vaiqta.com.br/">Vaiqta Negociação</a>
+                        <a href="https://wa.me/11913481040">📱 Central de Atendimento 01</a>
+                        <a href="https://wa.me/11961800240">📱 Central de Atendimento 02</a>
+                        <a href="https://wa.me/3432921922">📱 Negociação Intervalor 01</a>
+                        <a href="https://wa.me/3432921978">📱 Negociação Intervalor 02</a>
+                        <a href="tel:30034030">📞 CRA - Central do Aluno</a>
+                        <a href="tel:08007734444">📞 Central de Renegociação</a>
+                        <a href="https://acessounico.mec.gov.br/">FIES</a>
+                        <a href="https://prouni.mec.gov.br/index.html">PROUNI</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'vagas-sub')">
+                        <i class="fas fa-briefcase"></i> Vagas <span class="chevron">▶</span>
+                    </button>
+                    <div id="vagas-sub" class="sub-options">
+                        <a href="vagasinternas/vagasinternas.html">⭐ Divulgação Interna</a>
+                        <a href="https://emprega.ai/home">Emprega.ai</a>
+                        <a href="https://portal.ciee.org.br/">CIEE Estágios</a>
+                        <a href="https://proeestagios.com.br/">Proe Estágios</a>
+                        <a href="https://app.uberhub.com.br/vagas/">UberHub Vagas</a>
+                        <a href="https://www.gupy.io/">Gupy</a>
+                        <a href="https://www.vagas.com.br/">Vagas.com</a>
+                        <a href="https://eb.vagas.com.br/kroton">Vagas Kroton</a>
+                        <a href="https://www.catho.com.br/">Catho.com</a>
+                        <a href="https://www.glassdoor.com.br/index.htm">Glassdoor</a>
+                        <a href="https://br.indeed.com/">indeed</a>
+                        <a href="https://www.linkedin.com/feed/">Linkedin</a>
+                        <a href="https://www.infojobs.com.br/">Infojobs</a>
+                        <a href="https://www.nerdin.com.br/">Nerdin</a>
+                        <a href="https://ats.abler.com.br/jobs/shrecrutamento">SerHumano Recrutamento</a>
+                        <a href="https://www.trabalhabrasil.com.br/vagas-de-emprego-em-uberlandia-mg">Trabalha Brasil</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'jornada-sub')">
+                        <i class="fas fa-thumbtack"></i> Jornada Acadêmica <span class="chevron">▶</span>
+                    </button>
+                    <div id="jornada-sub" class="sub-options">
+                        <a href="">Entendendo o Portal do Aluno</a>
+                        <a href="">Entendendo as Notas</a>
+                        <a href="">Quais são Tipos de Prova</a>
+                        <a href="">Biblioteca</a>
+                        <a href="">Rematrícula</a>
+                        <a href="">Ajuste de Grade</a>
+                        <a href="">Horas Complementares</a>
+                        <a href="">Entendendo o AVA</a>
+                        <a href="">Monitoria</a>
+                        <a href="">Estágio</a>
+                        <a href="tcc/tcchome.html">TCC</a>
+                        <a href="">Conclusão de Curso</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'clinica-sub')">
+                        <i class="fas fa-thumbtack"></i> Clínicas de Saúde e NPJ <span class="chevron">▶</span>
+                    </button>
+                    <div id="clinica-sub" class="sub-options">
+                        <a href="">Clínica Odontológica</a>
+                        <a href="">Clínica de Nutrição</a>
+                        <a href="">Clínica de Psicologia</a>
+                        <a href="">Clínica Veterinária</a>
+                        <a href="">Clínica de Fisioterapia</a>
+                        <a href="">NPJ</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'biblioteca-sub')">
+                        <i class="fas fa-book"></i> Biblioteca <span class="chevron">▶</span>
+                    </button>
+                    <div id="biblioteca-sub" class="sub-options">
+                        <a href="https://biblioteca-virtual.com/anhanguera">Biblioteca Virtual</a>
+                        <a href="https://catalogoonline.kroton.com.br/">Biblioteca Física</a>
+                        <a href="https://repositorio.pgsscogna.com.br/cogna/pages/home/">Repositório Cogna</a>
+                        <a href="https://seer.pgsscogna.com.br/">Portal de Periódicos Cogna</a>
+                        <a href="https://pgsscogna.com.br/">Portal Stricto Sensu Cogna</a>
+                        <a href="https://forms.office.com/pages/responsepage.aspx?id=dnsOpaWOLEm_F5fWUvw86fOlEWYXs0BMmQMEkxzZKLxUOFIwMjVTS1E5S1RRTDQ4SjFWWUdaMjVNMy4u&route=shorturl">Fale com um Bibliotecário</a>
+                    </div>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'redessociais-sub')">
+                        <i class="fas fa-thumbs-up"></i> Redes Sociais <span class="chevron">▶</span>
+                    </button>
+                    <div id="redessociais-sub" class="sub-options">
+                        <a href="https://www.instagram.com/anhangueraudi/">Instagram Anhanguera Uberlândia</a>
+                        <a href="https://www.instagram.com/bibliointerativa/#">Instagram Biblioteca Interativa</a>
+                        <a href="https://www.youtube.com/@Bibliotecainterativa?sub_confirmation=1">Youtube Biblioteca Interativa</a>
+                        <a href="https://www.facebook.com/bibinterativa/">Facebook Biblioteca Interativa</a>
+                        <a href="https://www.tiktok.com/@bibliointerativa?is_from_webapp=1&sender_device=pc">TikTok Biblioteca Interativa</a>
+                    </div>
+                </section>
+            </div>
+
+            <div id="professores" class="tab-content">
+                <section class="main-menu">
+                    <h2 class="section-title">Acesso Rápido - Professores</h2>
+                    
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'agendamentos-prof-sub')">
+                        <i class="fas fa-calendar-alt"></i> Agendamento de Salas e Laboratórios <span class="chevron">▶</span>
+                    </button>
+                    <div id="agendamentos-prof-sub" class="sub-options show">
+                        <a href="#" onclick="showAgendamentoForm(); return false;">Novo Agendamento (Solicitar)</a>
+                        <a href="professores/meus-agendamentos.html">Meus Agendamentos Pendentes</a>
+                        <a href="professores/calendario-salas.html">Consultar Disponibilidade de Salas</a>
+                    </div>
+                    
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'portais-prof-sub')">
+                        <i class="fas fa-graduation-cap"></i> Portais e Documentos <span class="chevron">▶</span>
+                    </button>
+                    <div id="portais-prof-sub" class="sub-options">
+                        <a href="link-portal-professor.html">Portal do Professor</a>
+                        <a href="link-documentos.html">Regulamentos e Documentos</a>
+                    </div>
+                </section>
+            </div>
+
+            <div id="administradores" class="tab-content">
+                <section class="main-menu">
+                    <h2 class="section-title">Acesso Rápido - Administradores</h2>
+
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'agendamentos-adm-sub')">
+                        <i class="fas fa-user-check"></i> Gestão de Agendamentos <span class="chevron">▶</span>
+                    </button>
+                    <div id="agendamentos-adm-sub" class="sub-options show">
+                        <a href="administradores/aprovar-agendamentos.html">Aprovar/Rejeitar Agendamentos (Pendentes)</a>
+                        <a href="administradores/historico-agendamentos.html">Histórico Completo de Agendamentos</a>
+                        <a href="administradores/gerenciar-recursos.html">Gerenciar Salas e Laboratórios</a>
+                    </div>
+                    
+                    <button class="menu-button" onclick="toggleSubOptions(this, 'gestao-sub')">
+                        <i class="fas fa-cogs"></i> Gestão Acadêmica <span class="chevron">▶</span>
+                    </button>
+                    <div id="gestao-sub" class="sub-options">
+                        <a href="link-cadastro-aluno.html">Cadastro de Alunos</a>
+                        <a href="link-cadastro-professor.html">Cadastro de Professores</a>
+                    </div>
+                </section>
+            </div>
+            
+        </div> <div id="agendamento-form-container" class="agendamento-form-container container" style="display: none;">
+             <h2 class="section-title">Solicitação de Agendamento</h2>
+
+             <h3 class="section-subtitle">1. Selecione a Data e o Horário</h3>
+
+            <div class="calendar-container">
+                <div id="calendar">
+                    <div class="calendar-header">
+                        <button id="prevMonth">◀</button>
+                        <h4 id="monthYear">Outubro 2025</h4>
+                        <button id="nextMonth">▶</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                    </div>
+                    <div class="days" id="calendarDays">
+                       </div>
+                </div>
+            </div>
+
+            <form id="agendamentoForm">
+                <h3 class="section-subtitle">2. Detalhes do Agendamento</h3>
+                
+                <div class="form-group">
+                    <label for="sala">Sala/Laboratório Desejado:</label>
+                    <select id="sala" required>
+                        <option value="">Selecione...</option>
+                        <option value="LabInfo1">Laboratório de Informática 1</option>
+                        <option value="SalaMultimidia">Sala Multimídia A</option>
+                        <option value="LabFisica">Laboratório de Física</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="horario">Horário (Início - Fim):</label>
+                    <select id="horario" required>
+                        <option value="">Selecione...</option>
+                        <option value="07:00-09:00">07:00 - 09:00</option>
+                        <option value="19:00-21:00">19:00 - 21:00</option>
+                    </select>
+                </div>
+
+                <h3 class="section-subtitle">3. Seus Dados (Professor)</h3>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone para Contato:</label>
+                    <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivo">Motivo do Agendamento:</label>
+                    <textarea id="motivo" rows="3" required></textarea>
+                </div>
+                
+                <p class="warning-text">⚠️ O agendamento será enviado para a aprovação do Administrador.</p>
+                
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i> Enviar para Aprovação
+                </button>
+            </form>
+
+            <p><a href="#" onclick="hideAgendamentoForm(); return false;" class="back-link">Voltar para a Aba Professores</a></p>
+        </div>
+    </main>
+
+   <script>
+    // --- VARIÁVEIS GLOBAIS PARA O CALENDÁRIO ---
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    const calendarDays = document.getElementById('calendarDays');
+    const monthYearDisplay = document.getElementById('monthYear');
+    
+    // Simulação de Dados: Salas e Horários (para preencher o select)
+    const salas = {
+        "": "Selecione...",
+        "LabInfo1": "Laboratório de Informática 1",
+        "SalaMultimidia": "Sala Multimídia A",
+        "LabFisica": "Laboratório de Física"
+    };
+
+    const horarios = {
+        "": "Selecione...",
+        "07:00-09:00": "07:00 - 09:00 (Manhã)",
+        "09:00-11:00": "09:00 - 11:00 (Manhã)",
+        "14:00-16:00": "14:00 - 16:00 (Tarde)",
+        "19:00-21:00": "19:00 - 21:00 (Noite)"
+    };
+    
+    // --- FUNÇÕES DE LÓGICA DO PROJETO (MANTIDAS) ---
+
+    // Função para alternar o estado do menu de acordeão (mantida)
+    function toggleSubOptions(button, id) {
+        const el = document.getElementById(id);
+        const isVisible = el.classList.contains("show");
+        
+        const activeTabContent = document.querySelector('.tab-content:not([style*="display: none"])');
+        if (activeTabContent) {
+            activeTabContent.querySelectorAll('.sub-options').forEach(div => div.classList.remove("show"));
+            activeTabContent.querySelectorAll('.menu-button').forEach(btn => btn.classList.remove("active"));
+        }
+        
+        if (!isVisible) {
+            el.classList.add("show");
+            button.classList.add("active");
+        }
+    }
+
+    // FUNÇÃO PRINCIPAL: Alternar o conteúdo das abas (Aluno, Professor, Admin)
+    function openTab(evt, tabName) {
+        document.getElementById('agendamento-form-container').style.display = 'none';
+        
+        document.querySelectorAll(".tab-content").forEach(div => {
+            div.classList.remove("active-tab");
+            div.style.display = 'none';
+        });
+
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+
+        const targetTab = document.getElementById(tabName);
+        targetTab.classList.add("active-tab");
+        targetTab.style.display = 'block';
+        if (evt) {
+             evt.currentTarget.classList.add("active");
+        } else {
+             document.getElementById(`btn-${tabName}`).classList.add("active");
+        }
+
+        targetTab.querySelectorAll('.sub-options').forEach(sub => sub.classList.remove("show"));
+        targetTab.querySelectorAll('.menu-button').forEach(btn => btn.classList.remove("active"));
+    }
+    
+    // Função para alterar o perfil do usuário (mantida)
+    function changeProfile(profile) {
+        document.getElementById('btn-aluno').classList.add('hidden-tab');
+        document.getElementById('btn-professor').classList.add('hidden-tab');
+        document.getElementById('btn-administrador').classList.add('hidden-tab');
+
+        document.getElementById('agendamento-form-container').style.display = 'none';
+
+        let defaultTab = 'alunos';
+
+        if (profile === 'aluno') {
+            document.getElementById('btn-aluno').classList.remove('hidden-tab');
+            defaultTab = 'alunos';
+        } else if (profile === 'professor') {
+            document.getElementById('btn-aluno').classList.remove('hidden-tab');
+            document.getElementById('btn-professor').classList.remove('hidden-tab');
+            defaultTab = 'professores';
+        } else if (profile === 'administrador') {
+            document.getElementById('btn-aluno').classList.remove('hidden-tab');
+            document.getElementById('btn-professor').classList.remove('hidden-tab');
+            document.getElementById('btn-administrador').classList.remove('hidden-tab');
+            defaultTab = 'administradores';
+        }
+        
+        openTab(null, defaultTab);
+    }
+    
+    // --- NOVAS FUNÇÕES DE GERAÇÃO E NAVEGAÇÃO DO CALENDÁRIO ---
+
+    // Gera os dias do mês atual e preenche o calendário
+    function renderCalendar() {
+        if (!calendarDays) return; // Se o elemento não existir, sai da função
+        
+        calendarDays.innerHTML = ''; // Limpa os dias anteriores
+        monthYearDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+        const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay(); // 0 (Dom) a 6 (Sáb)
+        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+
+        // Cria dias vazios (preenchimento inicial)
+        for (let i = 0; i < firstDayOfMonth; i++) {
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('day', 'empty-day');
+            calendarDays.appendChild(dayElement);
+        }
+
+        // Cria os dias do mês
+        for (let day = 1; day <= daysInMonth; day++) {
+            const date = new Date(currentYear, currentMonth, day);
+            const dateStr = `${currentYear}-${currentMonth}-${day}`;
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('day');
+            dayElement.textContent = day;
+            dayElement.setAttribute('data-date', dateStr);
+
+            // Adiciona classes para estilo (passado, futuro, disponível, etc.)
+            const isToday = todayStr === dateStr;
+            const isPast = date < today && !isToday;
+
+            if (isPast) {
+                dayElement.classList.add('past-day');
+            } else {
+                // Simula a disponibilidade (Ex: Domingo e Sábado indisponíveis)
+                if (date.getDay() === 0 || date.getDay() === 6) { 
+                     dayElement.classList.add('unavailable'); // Finais de semana
+                } else {
+                    // Simula disponibilidade (Ex: Alternando disponibilidade em dias úteis)
+                    const isAvailable = (day % 3) !== 0; // Exemplo: A cada 3 dias está ocupado
+                    dayElement.classList.add(isAvailable ? 'available' : 'unavailable');
+                }
+            }
+
+            if (isToday) {
+                dayElement.classList.add('today');
+            }
+
+            calendarDays.appendChild(dayElement);
+        }
+    }
+
+    // Navega para o mês anterior
+    function prevMonth() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar();
+    }
+
+    // Navega para o próximo mês
+    function nextMonth() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar();
+    }
+    
+    // Funções de controle do formulário (mantidas com melhoria na navegação)
+    function showAgendamentoForm() {
+        document.querySelectorAll('.tab-content').forEach(div => div.style.display = 'none');
+        document.getElementById('tabs-nav').style.display = 'none'; 
+        document.getElementById('agendamento-form-container').style.display = 'block';
+        
+        // Garante que o calendário seja gerado ao mostrar o formulário
+        renderCalendar(); 
+    }
+
+    function hideAgendamentoForm() {
+        document.getElementById('tabs-nav').style.display = 'flex'; 
+        document.getElementById('agendamento-form-container').style.display = 'none';
+        openTab(null, 'professores');
+    }
+
+    // --- INICIALIZAÇÃO E LISTENERS ---
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        // Inicializa o perfil como "aluno"
+        changeProfile('aluno'); 
+
+        const form = document.getElementById('agendamentoForm');
+
+        // Adiciona listeners aos botões de navegação do calendário (se existirem)
+        const prevBtn = document.getElementById('prevMonth');
+        const nextBtn = document.getElementById('nextMonth');
+        if (prevBtn) prevBtn.onclick = prevMonth;
+        if (nextBtn) nextBtn.onclick = nextMonth;
+        
+        // Preenche os selects de Sala e Horário
+        const salaSelect = document.getElementById('sala');
+        const horarioSelect = document.getElementById('horario');
+        
+        if (salaSelect) {
+            for (const key in salas) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = salas[key];
+                salaSelect.appendChild(option);
+            }
+        }
+        
+        if (horarioSelect) {
+            for (const key in horarios) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = horarios[key];
+                horarioSelect.appendChild(option);
+            }
+        }
+
+        // Seleção de Data
+        if (calendarDays) {
+            calendarDays.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target.classList.contains('available')) {
+                    document.querySelectorAll('#calendarDays .day.selected').forEach(d => d.classList.remove('selected'));
+                    target.classList.add('selected');
+                    console.log(`Data selecionada: ${target.getAttribute('data-date')}`);
+                } else if (target.classList.contains('unavailable')) {
+                    alert('Esta data não possui salas ou laboratórios disponíveis para agendamento.');
+                }
+            });
+        }
+
+        // Submissão do Formulário
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simulação de envio
+                alert(`SUCESSO! Solicitação de agendamento enviada para aprovação.`);
+                form.reset();
+                document.querySelectorAll('#calendarDays .day.selected').forEach(d => d.classList.remove('selected'));
+                hideAgendamentoForm(); 
+            });
+        }
+    });
+
+    // Torna as funções de navegação globalmente acessíveis para os botões do HTML
+    window.prevMonth = prevMonth;
+    window.nextMonth = nextMonth;
+</script>
+</body>
+</html>

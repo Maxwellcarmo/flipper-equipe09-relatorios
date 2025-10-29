@@ -1,0 +1,20 @@
+<section class="main-menu">
+    <h2 class="section-title">Acesso Rápido - Professores</h2>
+    
+    <button class="menu-button" onclick="toggleSubOptions(this, 'agendamentos-prof-sub')">
+        <i class="fas fa-calendar-alt"></i> Agendamento de Salas e Laboratórios <span class="chevron">▶</span>
+    </button>
+    <div id="agendamentos-prof-sub" class="sub-options show">
+        <a href="../agendamento/novo-agendamento.html">Novo Agendamento (Solicitar)</a>
+        <a href="meus-agendamentos.html">Meus Agendamentos Pendentes</a>
+        <a href="calendario-salas.html">Consultar Disponibilidade de Salas</a>
+    </div>
+    
+    <button class="menu-button" onclick="toggleSubOptions(this, 'portais-prof-sub')">
+        <i class="fas fa-graduation-cap"></i> Portais e Documentos <span class="chevron">▶</span>
+    </button>
+    <div id="portais-prof-sub" class="sub-options">
+        <a href="link-portal-professor.html">Portal do Professor</a>
+        <a href="link-documentos.html">Regulamentos e Documentos</a>
+    </div>
+</section>
