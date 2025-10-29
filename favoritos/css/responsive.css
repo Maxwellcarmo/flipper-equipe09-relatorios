@@ -1,0 +1,27 @@
+/* --- Estilos Responsivos --- */
+
+/* Para telas médias (tablets) */
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 10px); /* 2 cards por linha em telas médias */
+    }
+}
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* 1 card por linha em telas pequenas */
+    }
+
+    /*  Faz os botões ficarem um em cima do outro */
+    .button-container {
+        flex-direction: column; /* Empilha os botões */
+        gap: 15px; /* Espaço entre os botões empilhados */
+        align-items: center; /* Centraliza eles na vertical */
+    }
+
+    .schedule-button {
+        width: 80%; /* Faz os botões não ocuparem a tela toda */
+        text-align: center;
+    }
+}

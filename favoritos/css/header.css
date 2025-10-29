@@ -1,0 +1,74 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Estilos do Cabeçalho Flipper --- */
+.flipper-header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    margin-bottom: 40px; /* Espaço entre o header e o resto da página */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a logo e o texto */
+    max-width: 960px; /* Alinha com a largura dos cards */
+    width: 100%; /* Garante que o conteúdo ocupe a largura máxima */
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    justify-content: center; /* Centraliza itens se quebrar a linha */
+}
+
+.flipper-logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.flipper-text h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.flipper-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9; /* Um pouco mais transparente */
+}
+
+.flipper-text a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.flipper-text a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+.banner-img {
+  height: 90px; /* Mantém a altura desejada */
+  max-width: 100%; /* Garante que a imagem nunca será maior que o seu contêiner */
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}

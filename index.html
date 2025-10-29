@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="agendamento.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="icon" href="logo.jpg" type="image/png" />
+
+</head>
 </head>
 <body>
     <header class="header">
@@ -33,6 +35,10 @@
                 <section class="main-menu">
                     <img src="images\semanaeng.jpg" alt="Semana da Engenharia" class="banner-img" />
                     <h2 class="section-title">Acesso Rápido - Alunos</h2>
+
+                    <button class="menu-button" onclick="window.location.href='favoritos/meusFavoritos.html'">
+                        <i class="fas fa-heart"></i> Meus Favoritos
+                    </button>
 
                     <button class="menu-button" onclick="toggleSubOptions(this, 'horarios-sub')">
                         <i class="fas fa-clock"></i> Horários e Calendário<span class="chevron">▶</span>
@@ -166,6 +172,10 @@
             <div id="professores" class="tab-content">
                 <section class="main-menu">
                     <h2 class="section-title">Acesso Rápido - Professores</h2>
+
+                    <button class="menu-button" onclick="window.location.href='favoritos/meusFavoritos.html'">
+                        <i class="fas fa-heart"></i> Meus Favoritos
+                    </button>
                     
                     <button class="menu-button" onclick="toggleSubOptions(this, 'agendamentos-prof-sub')">
                         <i class="fas fa-calendar-alt"></i> Agendamento de Salas e Laboratórios <span class="chevron">▶</span>
